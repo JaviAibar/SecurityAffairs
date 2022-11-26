@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Engine : MonoBehaviour {
@@ -13,15 +15,23 @@ public class Engine : MonoBehaviour {
     public Sprite unselected;
     private float secs = 0;
     private List<Selectable> selectables = new List<Selectable>();
+    private List<Resolution> _resolutions;
+    private int _selectedRes = 0;
     public GameObject canvas;
     public Animator[] animators;
+    public Text resText;
 
     public AudioSource clock;
 	// Use this for initialization
 	void Start ()
     {
-        Screen.SetResolution(Screen.width, (int)(Screen.width / 1.77f), FullScreenMode.FullScreenWindow);
-        Cursor.visible = false;
+        _resolutions = Screen.resolutions.Where(resolution => resolution.refreshRate == 60).ToList(); 
+        _selectedRes = _resolutions.Count - 1;
+        Debug.Log($"Detected {_resolutions.Count} resolutions:"+ string.Join(",",_resolutions.Select(e => $"({e.height}, {e.width})").ToList()) );
+        SetRes();
+        //Screen.SetResolution(Screen.width, (int)(Screen.width / 1.77f), FullScreenMode.FullScreenWindow);
+        if (SceneManager.GetActiveScene().name == "Game") Cursor.visible = false;
+        else Cursor.visible = true;
         GameObject[] gameobjectsFindable = GameObject.FindGameObjectsWithTag("Findable");
         GameObject[] gameobjectsSelectable = GameObject.FindGameObjectsWithTag("Selectable");
         foreach (GameObject go in gameobjectsFindable)
@@ -48,7 +58,7 @@ public class Engine : MonoBehaviour {
         }
         if (findings == selectables.Count)
         {
-            print("Finaliza el juego");
+            SceneManager.LoadScene("End");
         }
 	}
 
@@ -69,5 +79,31 @@ public class Engine : MonoBehaviour {
         }
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
+    IEnumerator SetRes()
+    {
+        Resolution res = _resolutions[_selectedRes];
+        print($"Setting {(_selectedRes + 1)} res out of {_resolutions.Count}: selected {res.width} x {res.height}");
+        Screen.SetResolution(res.width, res.height, FullScreenMode.FullScreenWindow);
+        resText.gameObject.SetActive(true);
+        resText.text = $"{res.width} x {res.height}";
+        yield return new WaitForSeconds(1.5f);
+        resText.gameObject.SetActive(false);
+    }
+
+    public void SetNextRes()
+    {
+        if (_selectedRes < _resolutions.Count - 1) ++_selectedRes;
+        StartCoroutine(SetRes());
+    }
+    
+    public void SetPrevRes()
+    {
+        if (_selectedRes > 0) --_selectedRes;
+        StartCoroutine(SetRes());
+    }
 }
