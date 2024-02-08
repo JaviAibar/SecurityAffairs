@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Files/Scenes/End.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
