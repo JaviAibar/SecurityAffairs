@@ -14,11 +14,13 @@ public class Selectable : MonoBehaviour {
 
     public void Found()
     {
-        print("isClicable: " + isClicable + ", found: " + found + ", faltan: " + (engine.findings < engine.findable.Count));
+        print(name + " isClicable: " + isClicable + ", found: " + found + ", faltan: " + (engine.findings < engine.findable.Count) + " "+ engine.Secs);
         if (isClicable && !found && engine.findings < engine.findable.Count)
         {
             found = true;
-            engine.findable[engine.findings++].sprite = engine.selected;
+            engine.findings++;
+            print($"Clicado {engine.findings} que corresponde con GO {engine.findable[engine.findings].name}");
+            engine.findable[engine.findings].sprite = engine.selected;
         }
     }
 

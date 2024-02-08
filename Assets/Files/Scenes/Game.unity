@@ -2686,8 +2686,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2074538752}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1547697768}
+        m_TargetAssemblyTypeName: Selectable, Assembly-CSharp
         m_MethodName: Found
         m_Mode: 1
         m_Arguments:
@@ -3979,8 +3979,8 @@ GameObject:
   - component: {fileID: 2074538751}
   - component: {fileID: 2074538753}
   - component: {fileID: 2074538754}
-  - component: {fileID: 2074538752}
   - component: {fileID: 2074538756}
+  - component: {fileID: 2074538757}
   - component: {fileID: 2074538755}
   m_Layer: 5
   m_Name: MonjaObject
@@ -4014,19 +4014,6 @@ RectTransform:
   m_AnchoredPosition: {x: 29.9, y: -77.1}
   m_SizeDelta: {x: 55.665, y: 100}
   m_Pivot: {x: 0.36654234, y: 0.5810422}
---- !u!114 &2074538752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074538750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ba18d0fe2f56a4292da8eb9ddfcc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  found: 0
 --- !u!222 &2074538753
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4166,6 +4153,18 @@ MonoBehaviour:
   lightning: {fileID: 0}
   clock: {fileID: 0}
   crack: {fileID: 2074538755}
+--- !u!114 &2074538757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074538750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfc3e49853855c40b60282a990bf528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2075762655
 PrefabInstance:
   m_ObjectHideFlags: 0
