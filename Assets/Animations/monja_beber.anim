@@ -457,7 +457,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 8.5
-    functionName: SwitchClicable
+    functionName: SwitchClickable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -470,8 +470,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 10
-    functionName: SwitchClicable
+  - time: 9.983334
+    functionName: SwitchClickable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

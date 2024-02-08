@@ -14,6 +14,7 @@ public class Engine : MonoBehaviour {
     public Sprite selected;
     public Sprite unselected;
     private float secs = 0;
+    public float Secs => secs;
     private List<Selectable> selectables = new List<Selectable>();
     private List<Resolution> _resolutions;
     private int _selectedRes = 0;
@@ -50,11 +51,11 @@ public class Engine : MonoBehaviour {
         //pos = Input.mousePosition;
         cursor.transform.position = Input.mousePosition;
         secs += Time.deltaTime;
-        if (secs > 10)
+        if (secs >= 10)
         {
-            secs = 0;
             findings = 0;
             ResetFindables();
+            init();
         }
         if (findings == selectables.Count)
         {
@@ -64,9 +65,8 @@ public class Engine : MonoBehaviour {
 
     private void ResetFindables()
     {
-        foreach (Image i in findable) i.sprite = unselected;
         foreach (Selectable s in selectables) s.found = false;
-
+        foreach (Image i in findable) i.sprite = unselected;
     }
 
     public void init()
