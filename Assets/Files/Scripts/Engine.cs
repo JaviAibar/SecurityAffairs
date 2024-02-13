@@ -1,82 +1,85 @@
-﻿using System.Collections;
+﻿using Assets.Files.Scripts;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Engine : MonoBehaviour {
 
-    public Image cursor;
-    public Vector3 pos;
-    public int findings = 0;
-    public List<Image> findable;
-    public Sprite selected;
-    public Sprite unselected;
-    private float secs = 0;
-    public float Secs => secs;
+    [SerializeField] private Image cursor;
+    [SerializeField] private Vector3 pos;
+    [SerializeField] private int findings = 0;
+    [SerializeField] private List<Image> findable;
+    [SerializeField] private Sprite selected;
+    [SerializeField] private Sprite unselected;
+    private bool _initiated = false;
+    private float _seconds = 0;
+    public float Secs => _seconds;
     private List<Selectable> selectables = new List<Selectable>();
-    private List<Resolution> _resolutions;
-    private int _selectedRes = 0;
-    public GameObject canvas;
-    public Animator[] animators;
-    public Text resText;
+    [SerializeField] private GameObject _canvas;
+    [SerializeField] private Animator[] _animators;
+    private const float MaxTimeToFind = 10.0f;
+    public bool TimeOut => _seconds >= MaxTimeToFind;
 
-    public AudioSource clock;
+
+    [SerializeField] private AudioSource clock;
 	// Use this for initialization
 	void Start ()
     {
-        _resolutions = Screen.resolutions.Where(resolution => resolution.refreshRate == 60).ToList(); 
-        _selectedRes = _resolutions.Count - 1;
-        Debug.Log($"Detected {_resolutions.Count} resolutions:"+ string.Join(",",_resolutions.Select(e => $"({e.height}, {e.width})").ToList()) );
-        SetRes();
         //Screen.SetResolution(Screen.width, (int)(Screen.width / 1.77f), FullScreenMode.FullScreenWindow);
         if (SceneManager.GetActiveScene().name == "Game") Cursor.visible = false;
         else Cursor.visible = true;
+
         GameObject[] gameobjectsFindable = GameObject.FindGameObjectsWithTag("Findable");
+        findable.AddRange(gameobjectsFindable.Select(go => go.GetComponent<Image>()));
+
         GameObject[] gameobjectsSelectable = GameObject.FindGameObjectsWithTag("Selectable");
-        foreach (GameObject go in gameobjectsFindable)
+        selectables.AddRange(gameobjectsSelectable.Select(go => go.GetComponent<Selectable>()));
+
+        foreach (Selectable selectable in selectables)
         {
-            findable.Add(go.GetComponent<Image>());
+            selectable.OnFound += OnSelectableFound;
         }
-        foreach (GameObject go in gameobjectsSelectable)
-        {
-            selectables.Add(go.GetComponent<Selectable>());
-        }
-        animators = canvas.GetComponentsInChildren<Animator>();
+
+        _animators = _canvas.GetComponentsInChildren<Animator>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnSelectableFound(Selectable selectable)
+    {
+        findable[findings++].sprite = selected;
+        if (findings == selectables.Count)
+            SceneManager.LoadScene(Constants.End);
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if (!_initiated) return;
         //pos = Input.mousePosition;
         cursor.transform.position = Input.mousePosition;
-        secs += Time.deltaTime;
-        if (secs >= 10)
-        {
-            findings = 0;
-            ResetFindables();
-            init();
-        }
-        if (findings == selectables.Count)
-        {
-            SceneManager.LoadScene("End");
-        }
-	}
+        _seconds += Time.deltaTime;
+        if (TimeOut) Init();
+    }
 
     private void ResetFindables()
     {
-        foreach (Selectable s in selectables) s.found = false;
+        findings = 0;
+        foreach (Selectable s in selectables) s.Found = false;
         foreach (Image i in findable) i.sprite = unselected;
     }
 
-    public void init()
+    public void Init()
     {
+        _initiated = true;
+        ResetFindables();
+
         clock.Play();
-        foreach (Animator a in animators)
-        {
-            a.SetTrigger("start");
-            secs = 0;
-        }
+        _seconds = 0;
+        foreach (Animator animator in _animators)
+            animator.SetTrigger("start");
     }
 
     public void QuitGame()
@@ -84,26 +87,4 @@ public class Engine : MonoBehaviour {
         Application.Quit();
     }
 
-    IEnumerator SetRes()
-    {
-        Resolution res = _resolutions[_selectedRes];
-        print($"Setting {(_selectedRes + 1)} res out of {_resolutions.Count}: selected {res.width} x {res.height}");
-        Screen.SetResolution(res.width, res.height, FullScreenMode.FullScreenWindow);
-        resText.gameObject.SetActive(true);
-        resText.text = $"{res.width} x {res.height}";
-        yield return new WaitForSeconds(1.5f);
-        resText.gameObject.SetActive(false);
-    }
-
-    public void SetNextRes()
-    {
-        if (_selectedRes < _resolutions.Count - 1) ++_selectedRes;
-        StartCoroutine(SetRes());
-    }
-    
-    public void SetPrevRes()
-    {
-        if (_selectedRes > 0) --_selectedRes;
-        StartCoroutine(SetRes());
-    }
 }

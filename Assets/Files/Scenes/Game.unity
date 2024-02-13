@@ -171,7 +171,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &3449781
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -188,7 +188,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!222 &3449782
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -272,8 +273,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3449785}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Found
+        m_TargetAssemblyTypeName: Selectable, Assembly-CSharp
+        m_MethodName: FindSelectable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -295,7 +296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ba18d0fe2f56a4292da8eb9ddfcc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  found: 0
 --- !u!114 &3449786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,13 +418,14 @@ GameObject:
   - component: {fileID: 113169059}
   - component: {fileID: 113169060}
   - component: {fileID: 113169061}
+  - component: {fileID: 113169062}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ResolutionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &113169059
 RectTransform:
   m_ObjectHideFlags: 0
@@ -466,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
+  m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -486,7 +487,28 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: qwtgeeshwhew
+--- !u!95 &113169062
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113169058}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2af9477e844f1024d94082119a4f8d58, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &134415846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1397,85 @@ RectTransform:
   m_AnchoredPosition: {x: 59.34, y: 5.549988}
   m_SizeDelta: {x: 418.18, y: 40.8}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &932941136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932941139}
+  - component: {fileID: 932941138}
+  - component: {fileID: 932941137}
+  m_Layer: 0
+  m_Name: SceneContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &932941137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932941136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08473e8810e6d704fabc6796ada321eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionsTextAnimator: {fileID: 113169062}
+  resolutionsText: {fileID: 113169061}
+--- !u!114 &932941138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932941136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 932941137}
+  _installerPrefabs: []
+  _autoRun: 1
+  OnPreInstall:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPostInstall:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPreResolve:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPostResolve:
+    m_PersistentCalls:
+      m_Calls: []
+  _parentNewObjectsUnderSceneContext: 0
+  _contractNames: []
+  _parentContractNames: []
+--- !u!4 &932941139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932941136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034149759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,8 +2245,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1345745889}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Found
+        m_TargetAssemblyTypeName: Selectable, Assembly-CSharp
+        m_MethodName: FindSelectable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2167,10 +2268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ba18d0fe2f56a4292da8eb9ddfcc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  found: 0
 --- !u!95 &1345745890
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2187,7 +2287,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!222 &1345745891
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2476,6 +2577,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414066196}
   m_CullTransparentMesh: 0
+--- !u!1 &1473061971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1473061973}
+  - component: {fileID: 1473061972}
+  m_Layer: 0
+  m_Name: Resolutions Selector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1473061972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473061971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12376dfedcd63434da536a940079562e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1473061973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473061971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538892436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,7 +2833,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1547697768}
         m_TargetAssemblyTypeName: Selectable, Assembly-CSharp
-        m_MethodName: Found
+        m_MethodName: FindSelectable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2710,7 +2855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ba18d0fe2f56a4292da8eb9ddfcc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  found: 0
 --- !u!1 &1636945803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,7 +3095,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757828310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.09070755, y: -0.07345352, z: 0.09699039, w: 0.9884177}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3004,7 +3148,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!95 &1757828314
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3021,7 +3165,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &1793433154 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224385954339097958, guid: dc8e209806615da43a6bffb04f5bbbb0, type: 3}
@@ -3062,9 +3207,8 @@ MonoBehaviour:
   findable: []
   selected: {fileID: 21300002, guid: 32750551029236c48a8119ffc132fc4d, type: 3}
   unselected: {fileID: 21300000, guid: 32750551029236c48a8119ffc132fc4d, type: 3}
-  canvas: {fileID: 414272969}
-  animators: []
-  resText: {fileID: 113169061}
+  _canvas: {fileID: 414272969}
+  _animators: []
   clock: {fileID: 3449787}
 --- !u!4 &1817440859
 Transform:
@@ -3373,7 +3517,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1817440858}
         m_TargetAssemblyTypeName: Engine, Assembly-CSharp
-        m_MethodName: init
+        m_MethodName: Init
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3409,7 +3553,7 @@ MonoBehaviour:
         m_CallState: 2
 --- !u!95 &1936895552
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3426,7 +3570,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!222 &1936895553
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3612,8 +3757,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1817440858}
-        m_TargetAssemblyTypeName: Engine, Assembly-CSharp
+      - m_Target: {fileID: 1473061972}
+        m_TargetAssemblyTypeName: ResolutionSelector, Assembly-CSharp
         m_MethodName: SetNextRes
         m_Mode: 1
         m_Arguments:
@@ -3861,17 +4006,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071125535}
-  m_LocalRotation: {x: 0, y: 0, z: -0.026176924, w: 0.99965733}
+  m_LocalRotation: {x: -0, y: -0, z: -0.042470556, w: 0.9990977}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 884727328}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.868}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 25.9, y: -3.7}
+  m_AnchoredPosition: {x: 25.000046, y: -4.5}
   m_SizeDelta: {x: 46.45, y: 36.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071125537
@@ -3918,8 +4063,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1817440858}
-        m_TargetAssemblyTypeName: Engine, Assembly-CSharp
+      - m_Target: {fileID: 1473061972}
+        m_TargetAssemblyTypeName: ResolutionSelector, Assembly-CSharp
         m_MethodName: SetPrevRes
         m_Mode: 1
         m_Arguments:
@@ -4024,7 +4169,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!95 &2074538754
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4041,7 +4186,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &2074538755
 AudioSource:
   m_ObjectHideFlags: 0
