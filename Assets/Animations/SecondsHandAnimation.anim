@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: secs2
+  m_Name: SecondsHandAnimation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -119,7 +119,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: sec
+    path: SecondsHand
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -132,7 +132,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1707581467
+      path: 2176456909
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -266,7 +266,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: sec
+    path: SecondsHand
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -375,7 +375,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: sec
+    path: SecondsHand
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -484,7 +484,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: sec
+    path: SecondsHand
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -495,7 +495,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: sec
+    path: SecondsHand
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -505,7 +505,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: sec
+    path: SecondsHand
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -515,7 +515,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: sec
+    path: SecondsHand
     classID: 224
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

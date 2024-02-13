@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Crucifijo
+  m_Name: HorizontalCrossAnimatorController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: start
@@ -17,7 +17,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 1107945105610394406}
+    m_StateMachine: {fileID: 1107321241399589418}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -27,7 +27,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &1101635355152477044
+--- !u!1101 &1101907901545896814
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,7 +38,7 @@ AnimatorStateTransition:
     m_ConditionEvent: start
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102370099928360508}
+  m_DstState: {fileID: 1102114660339176444}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -51,7 +51,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &1102370099928360508
+--- !u!1102 &1102114660339176444
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -76,7 +76,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102734112784901900
+--- !u!1102 &1102594180898210170
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -86,7 +86,7 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: 1101635355152477044}
+  - {fileID: 1101907901545896814}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -102,7 +102,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1107 &1107945105610394406
+--- !u!1107 &1107321241399589418
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -111,11 +111,11 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 1102370099928360508}
-    m_Position: {x: 312, y: 12, z: 0}
+    m_State: {fileID: 1102114660339176444}
+    m_Position: {x: 200, y: 0, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102734112784901900}
-    m_Position: {x: 323.54907, y: 133.77234, z: 0}
+    m_State: {fileID: 1102594180898210170}
+    m_Position: {x: 333.41998, y: 125.30916, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -125,4 +125,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102734112784901900}
+  m_DefaultState: {fileID: 1102594180898210170}

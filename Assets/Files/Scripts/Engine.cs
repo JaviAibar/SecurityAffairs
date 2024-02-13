@@ -10,65 +10,60 @@ using UnityEngine.UI;
 
 public class Engine : MonoBehaviour {
 
-    [SerializeField] private Image cursor;
-    [SerializeField] private Vector3 pos;
-    [SerializeField] private int findings = 0;
-    [SerializeField] private List<Image> findable;
-    [SerializeField] private Sprite selected;
-    [SerializeField] private Sprite unselected;
+    [SerializeField] private Image _cursor;
+    [SerializeField] private int _findings = 0;
+    private Image[] _findableImagesList;
+    [SerializeField] private GameObject _findableImagesListGO;
+    [SerializeField] private Sprite _selectedSprite;
+    [SerializeField] private Sprite _unselectedSprite;
     private bool _initiated = false;
     private float _seconds = 0;
-    public float Secs => _seconds;
-    private List<Selectable> selectables = new List<Selectable>();
+    public float Seconds => _seconds;
+    private Selectable[] _selectables;
     [SerializeField] private GameObject _canvas;
     [SerializeField] private Animator[] _animators;
     private const float MaxTimeToFind = 10.0f;
     public bool TimeOut => _seconds >= MaxTimeToFind;
 
 
-    [SerializeField] private AudioSource clock;
+    [SerializeField] private AudioSource _clockAudioSource;
 	// Use this for initialization
 	void Start ()
     {
-        //Screen.SetResolution(Screen.width, (int)(Screen.width / 1.77f), FullScreenMode.FullScreenWindow);
         if (SceneManager.GetActiveScene().name == "Game") Cursor.visible = false;
         else Cursor.visible = true;
 
-        GameObject[] gameobjectsFindable = GameObject.FindGameObjectsWithTag("Findable");
-        findable.AddRange(gameobjectsFindable.Select(go => go.GetComponent<Image>()));
+        _findableImagesList = _findableImagesListGO.GetComponentsInChildren<Image>();
 
-        GameObject[] gameobjectsSelectable = GameObject.FindGameObjectsWithTag("Selectable");
-        selectables.AddRange(gameobjectsSelectable.Select(go => go.GetComponent<Selectable>()));
+        _selectables = FindObjectsByType<Selectable>(FindObjectsSortMode.None);
 
-        foreach (Selectable selectable in selectables)
-        {
+        foreach (Selectable selectable in _selectables)
             selectable.OnFound += OnSelectableFound;
-        }
 
         _animators = _canvas.GetComponentsInChildren<Animator>();
 	}
 
     private void OnSelectableFound(Selectable selectable)
     {
-        findable[findings++].sprite = selected;
-        if (findings == selectables.Count)
+        _findableImagesList[_findings++].sprite = _selectedSprite;
+        if (_findings == _selectables.Length)
             SceneManager.LoadScene(Constants.End);
     }
 
     // Update is called once per frame
     void Update () {
         if (!_initiated) return;
-        //pos = Input.mousePosition;
-        cursor.transform.position = Input.mousePosition;
+
+        _cursor.transform.position = Input.mousePosition;
         _seconds += Time.deltaTime;
         if (TimeOut) Init();
     }
 
     private void ResetFindables()
     {
-        findings = 0;
-        foreach (Selectable s in selectables) s.Found = false;
-        foreach (Image i in findable) i.sprite = unselected;
+        _findings = 0;
+        foreach (Selectable s in _selectables) s.Found = false;
+        foreach (Image i in _findableImagesList) i.sprite = _unselectedSprite;
     }
 
     public void Init()
@@ -76,7 +71,7 @@ public class Engine : MonoBehaviour {
         _initiated = true;
         ResetFindables();
 
-        clock.Play();
+        _clockAudioSource.Play();
         _seconds = 0;
         foreach (Animator animator in _animators)
             animator.SetTrigger("start");

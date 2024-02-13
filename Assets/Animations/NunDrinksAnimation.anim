@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: monja_beber
+  m_Name: NunDrinksAnimation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -69,7 +69,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: brazoDer
+    path: Right Arm
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -124,7 +124,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: brazoDer
+    path: Right Arm
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -161,7 +161,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_SizeDelta.x
-    path: brazoDer
+    path: Right Arm
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -189,7 +189,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_SizeDelta.y
-    path: brazoDer
+    path: Right Arm
     classID: 224
     script: {fileID: 0}
   m_PPtrCurves:
@@ -205,7 +205,7 @@ AnimationClip:
     - time: 10
       value: {fileID: 21300006, guid: 62dc457bec0930e4d992ef46cdbd40fc, type: 3}
     attribute: m_Sprite
-    path: brazoDer
+    path: Right Arm
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_SampleRate: 60
@@ -216,35 +216,35 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1317458055
+      path: 747450821
       attribute: 538195251
       script: {fileID: 0}
       typeID: 224
       customType: 28
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1317458055
+      path: 747450821
       attribute: 1460864421
       script: {fileID: 0}
       typeID: 224
       customType: 28
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1317458055
+      path: 747450821
       attribute: 1967290853
       script: {fileID: 0}
       typeID: 224
       customType: 28
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1317458055
+      path: 747450821
       attribute: 2015549526
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114
       customType: 0
       isPPtrCurve: 1
     - serializedVersion: 2
-      path: 1317458055
+      path: 747450821
       attribute: 38095219
       script: {fileID: 0}
       typeID: 224
@@ -329,7 +329,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: brazoDer
+    path: Right Arm
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -384,7 +384,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: brazoDer
+    path: Right Arm
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -421,7 +421,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_SizeDelta.x
-    path: brazoDer
+    path: Right Arm
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -449,7 +449,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_SizeDelta.y
-    path: brazoDer
+    path: Right Arm
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []
