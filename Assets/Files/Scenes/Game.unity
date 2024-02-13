@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 3449786}
   - component: {fileID: 3449787}
   m_Layer: 5
-  m_Name: esfera
+  m_Name: Clockface
   m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,7 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134415847}
   m_Layer: 5
-  m_Name: Reloj
+  m_Name: Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 218577455}
   - component: {fileID: 218577454}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Play Background Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 438812498}
   - component: {fileID: 438812497}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Play Foreground Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -919,7 +919,7 @@ GameObject:
   - component: {fileID: 456763591}
   - component: {fileID: 456763592}
   m_Layer: 5
-  m_Name: Cristal (mascara)
+  m_Name: Glass (mask)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1094,7 +1094,7 @@ GameObject:
   - component: {fileID: 655508463}
   - component: {fileID: 655508462}
   m_Layer: 5
-  m_Name: Fondo_hab
+  m_Name: Room Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1253,7 +1253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715583556}
   m_Layer: 5
-  m_Name: findable
+  m_Name: FindableImageList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1294,7 +1294,7 @@ GameObject:
   - component: {fileID: 868646184}
   - component: {fileID: 868646183}
   m_Layer: 5
-  m_Name: horas
+  m_Name: HoursHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1368,7 +1368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 884727328}
   m_Layer: 5
-  m_Name: BotonesMonitor
+  m_Name: Monitor Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1488,7 +1488,7 @@ GameObject:
   - component: {fileID: 1034149762}
   - component: {fileID: 1034149761}
   m_Layer: 5
-  m_Name: brazoIzq
+  m_Name: Left Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 1069039065}
   - component: {fileID: 1069039064}
   m_Layer: 5
-  m_Name: sec
+  m_Name: SecondsHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1805,7 +1805,7 @@ GameObject:
   - component: {fileID: 1154655313}
   - component: {fileID: 1154655312}
   m_Layer: 5
-  m_Name: FondoCasa
+  m_Name: House Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2095,7 +2095,7 @@ GameObject:
   - component: {fileID: 1244275945}
   - component: {fileID: 1244275944}
   m_Layer: 5
-  m_Name: Silla
+  m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2174,7 +2174,7 @@ GameObject:
   - component: {fileID: 1345745892}
   - component: {fileID: 1345745890}
   m_Layer: 5
-  m_Name: Crucifijo
+  m_Name: Crucifix
   m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2336,7 +2336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1290230534461740, guid: 122b9a40f933d24458132efb0b509913, type: 3}
       propertyPath: m_Name
-      value: Image (2)
+      value: Findable 2
       objectReference: {fileID: 0}
     - target: {fileID: 224056656000289862, guid: 122b9a40f933d24458132efb0b509913, type: 3}
       propertyPath: m_Pivot.x
@@ -2436,7 +2436,7 @@ GameObject:
   - component: {fileID: 1379502998}
   - component: {fileID: 1379502997}
   m_Layer: 5
-  m_Name: marco
+  m_Name: Clock Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2512,7 +2512,7 @@ GameObject:
   - component: {fileID: 1414066199}
   - component: {fileID: 1414066198}
   m_Layer: 5
-  m_Name: cursor
+  m_Name: Cursor Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2712,7 +2712,7 @@ GameObject:
   - component: {fileID: 1547697767}
   - component: {fileID: 1547697768}
   m_Layer: 8
-  m_Name: brazoDer
+  m_Name: Right Arm
   m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2868,7 +2868,7 @@ GameObject:
   - component: {fileID: 1636945806}
   - component: {fileID: 1636945805}
   m_Layer: 5
-  m_Name: botonPow
+  m_Name: Power Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3000,7 +3000,7 @@ GameObject:
   - component: {fileID: 1700633357}
   - component: {fileID: 1700633356}
   m_Layer: 5
-  m_Name: Mesa
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3082,7 +3082,7 @@ GameObject:
   - component: {fileID: 1757828312}
   - component: {fileID: 1757828314}
   m_Layer: 5
-  m_Name: pendulo
+  m_Name: Pendulum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3201,15 +3201,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdff158529937494383391fc83157b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 1414066198}
-  pos: {x: 0, y: 0, z: 0}
-  findings: 0
-  findable: []
-  selected: {fileID: 21300002, guid: 32750551029236c48a8119ffc132fc4d, type: 3}
-  unselected: {fileID: 21300000, guid: 32750551029236c48a8119ffc132fc4d, type: 3}
+  _cursor: {fileID: 1414066198}
+  _findings: 0
+  _findableImagesListGO: {fileID: 715583555}
+  _selectedSprite: {fileID: 21300002, guid: 32750551029236c48a8119ffc132fc4d, type: 3}
+  _unselectedSprite: {fileID: 21300000, guid: 32750551029236c48a8119ffc132fc4d, type: 3}
   _canvas: {fileID: 414272969}
   _animators: []
-  clock: {fileID: 3449787}
+  _clockAudioSource: {fileID: 1069039064}
 --- !u!4 &1817440859
 Transform:
   m_ObjectHideFlags: 0
@@ -3285,7 +3284,7 @@ GameObject:
   - component: {fileID: 1842466999}
   - component: {fileID: 1842466998}
   m_Layer: 5
-  m_Name: mins
+  m_Name: MinutesHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3361,7 +3360,7 @@ GameObject:
   - component: {fileID: 1858120148}
   - component: {fileID: 1858120147}
   m_Layer: 5
-  m_Name: Monja
+  m_Name: Nun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3443,7 +3442,7 @@ GameObject:
   - component: {fileID: 1936895552}
   - component: {fileID: 1936895551}
   m_Layer: 5
-  m_Name: Play
+  m_Name: Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3593,7 +3592,7 @@ GameObject:
   - component: {fileID: 1969327733}
   - component: {fileID: 1969327732}
   m_Layer: 5
-  m_Name: Pantalla
+  m_Name: Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3687,7 +3686,7 @@ GameObject:
   - component: {fileID: 2018525031}
   - component: {fileID: 2018525030}
   m_Layer: 5
-  m_Name: botonDer
+  m_Name: Right Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3816,7 +3815,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1290230534461740, guid: 122b9a40f933d24458132efb0b509913, type: 3}
       propertyPath: m_Name
-      value: Image (3)
+      value: Findable 3
       objectReference: {fileID: 0}
     - target: {fileID: 224056656000289862, guid: 122b9a40f933d24458132efb0b509913, type: 3}
       propertyPath: m_Pivot.x
@@ -3916,7 +3915,7 @@ GameObject:
   - component: {fileID: 2062785216}
   - component: {fileID: 2062785215}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Glass Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3993,7 +3992,7 @@ GameObject:
   - component: {fileID: 2071125538}
   - component: {fileID: 2071125537}
   m_Layer: 5
-  m_Name: botonIzq
+  m_Name: Left Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4128,7 +4127,7 @@ GameObject:
   - component: {fileID: 2074538757}
   - component: {fileID: 2074538755}
   m_Layer: 5
-  m_Name: MonjaObject
+  m_Name: Nun Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4318,6 +4317,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 715583556}
     m_Modifications:
+    - target: {fileID: 1290230534461740, guid: 122b9a40f933d24458132efb0b509913, type: 3}
+      propertyPath: m_Name
+      value: Findable 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224056656000289862, guid: 122b9a40f933d24458132efb0b509913, type: 3}
       propertyPath: m_Pivot.x
       value: 0.49999994
@@ -4404,7 +4407,7 @@ GameObject:
   - component: {fileID: 2112555465}
   - component: {fileID: 2112555464}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Hand Knob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

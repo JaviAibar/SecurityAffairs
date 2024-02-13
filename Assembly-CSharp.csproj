@@ -778,6 +778,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{D3E0635B-2766-0A63-6638-1B5073674F4F}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{6F0648C4-2840-E972-415A-812BA7B40227}</Project>
       <Name>Zenject-ReflectionBaking-Editor</Name>
