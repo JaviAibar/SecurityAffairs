@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="I:\GameDev\Unity Projects del Disco duro de Sergio\SecurityAffairs\Assets\ShaderForge\Editor\ShaderForge.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ShaderForge\Editor\InternalResources\Inspectors\ShaderForgeInspector.cs" />
