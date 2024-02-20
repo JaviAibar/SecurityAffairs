@@ -12,6 +12,12 @@ namespace Zenject.Tests.Bindings
         Foo _foo1;
         Foo _foo2;
 
+
+        /* SETUP1
+         * root (foo1)
+         *   child1
+         *   child2 (foo2)
+         */
         public void Setup1()
         {
             var root = new GameObject();
@@ -27,6 +33,10 @@ namespace Zenject.Tests.Bindings
             _foo2 = child2.AddComponent<Foo>();
         }
 
+        /* SETUP2
+         * root
+         *   child1
+         */
         public void Setup2()
         {
             var root = new GameObject();
@@ -35,6 +45,7 @@ namespace Zenject.Tests.Bindings
             child1.transform.SetParent(root.transform);
         }
 
+        
         [UnityTest]
         public IEnumerator RunMatchSingle()
         {
