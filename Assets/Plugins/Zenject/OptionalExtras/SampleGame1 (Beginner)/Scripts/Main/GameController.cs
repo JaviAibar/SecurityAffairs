@@ -1,5 +1,5 @@
-using System;
 using ModestTree;
+using System;
 using UnityEngine;
 
 namespace Zenject.Asteroids
@@ -58,25 +58,25 @@ namespace Zenject.Asteroids
             switch (_state)
             {
                 case GameStates.WaitingToStart:
-                {
-                    UpdateStarting();
-                    break;
-                }
+                    {
+                        UpdateStarting();
+                        break;
+                    }
                 case GameStates.Playing:
-                {
-                    UpdatePlaying();
-                    break;
-                }
+                    {
+                        UpdatePlaying();
+                        break;
+                    }
                 case GameStates.GameOver:
-                {
-                    UpdateGameOver();
-                    break;
-                }
+                    {
+                        UpdateGameOver();
+                        break;
+                    }
                 default:
-                {
-                    Assert.That(false);
-                    break;
-                }
+                    {
+                        Assert.That(false);
+                        break;
+                    }
             }
         }
 

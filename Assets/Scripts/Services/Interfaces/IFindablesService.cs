@@ -1,10 +1,7 @@
-﻿namespace SecurityAffairs.Scripts.Services
+﻿public interface IFindablesService
 {
-    public interface IFindablesService
-    {
-        void ResetFindables();
-        void SelectableFound();
+    void ResetFindables();
+    void SelectableFound();
 
-        int Founds { get; }
-    }
+    int Founds { get; }
 }

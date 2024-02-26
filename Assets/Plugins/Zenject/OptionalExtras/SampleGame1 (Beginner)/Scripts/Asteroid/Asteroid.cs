@@ -1,5 +1,5 @@
-using System;
 using ModestTree;
+using System;
 using UnityEngine;
 
 namespace Zenject.Asteroids

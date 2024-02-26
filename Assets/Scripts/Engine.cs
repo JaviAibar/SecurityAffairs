@@ -1,11 +1,10 @@
-﻿using SecurityAffairs.Files.Scripts;
-using SecurityAffairs.Scripts.Services;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
 
-public class Engine : MonoBehaviour {
+public class Engine : MonoBehaviour
+{
 
     [SerializeField] private Image _cursor;
     private bool _initiated = false;
@@ -17,16 +16,17 @@ public class Engine : MonoBehaviour {
     public bool TimeOut => _seconds >= MaxTimeToFind;
     [Inject] private IAudioService _audioService;
     [Inject] private SelectablesManager _selectablesManager;
-	void Start ()
+    void Start()
     {
         if (SceneManager.GetActiveScene().name == "Game") Cursor.visible = false;
         else Cursor.visible = true;
 
         _animators = _canvas.GetComponentsInChildren<Animator>();
-	}
+    }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         if (!_initiated) return;
 
         _cursor.transform.position = Input.mousePosition;

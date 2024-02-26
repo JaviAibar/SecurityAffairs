@@ -52,12 +52,12 @@ namespace Zenject
                 && Equals(Callback, that.Callback);
         }
 
-        public static bool operator == (SignalSubscriptionId left, SignalSubscriptionId right)
+        public static bool operator ==(SignalSubscriptionId left, SignalSubscriptionId right)
         {
             return left.Equals(right);
         }
 
-        public static bool operator != (SignalSubscriptionId left, SignalSubscriptionId right)
+        public static bool operator !=(SignalSubscriptionId left, SignalSubscriptionId right)
         {
             return !left.Equals(right);
         }

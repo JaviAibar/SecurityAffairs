@@ -1,18 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwitchClickableChildren : MonoBehaviour
 {
-    private Selectable s;
+    [SerializeField] private Selectable m_Selectable;
     private void Awake()
     {
-        s = GetComponentInChildren<Selectable>();
+        if (m_Selectable == null)  
+            m_Selectable = GetComponentInChildren<Selectable>();
     }
 
     public void SwitchClickable()
     {
-        s.SwitchClicable();
+        m_Selectable.SwitchClicable();
     }
 }

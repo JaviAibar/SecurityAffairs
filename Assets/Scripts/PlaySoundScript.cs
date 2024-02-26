@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlaySoundScript : MonoBehaviour {
+public class PlaySoundScript : MonoBehaviour
+{
     public AudioSource lightning;
     public AudioSource clock;
     public AudioSource crack;

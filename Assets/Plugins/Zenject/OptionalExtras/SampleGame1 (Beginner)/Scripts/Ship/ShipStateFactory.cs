@@ -19,7 +19,7 @@ namespace Zenject.Asteroids
         public ShipStateFactory(
             ShipStateDead.Factory deadFactory,
             ShipStateMoving.Factory movingFactory,
-            ShipStateWaitingToStart.Factory  waitingFactory)
+            ShipStateWaitingToStart.Factory waitingFactory)
         {
             _waitingFactory = waitingFactory;
             _movingFactory = movingFactory;
@@ -31,17 +31,17 @@ namespace Zenject.Asteroids
             switch (state)
             {
                 case ShipStates.Dead:
-                {
-                    return _deadFactory.Create();
-                }
+                    {
+                        return _deadFactory.Create();
+                    }
                 case ShipStates.WaitingToStart:
-                {
-                    return _waitingFactory.Create();
-                }
+                    {
+                        return _waitingFactory.Create();
+                    }
                 case ShipStates.Moving:
-                {
-                    return _movingFactory.Create();
-                }
+                    {
+                        return _movingFactory.Create();
+                    }
             }
 
             throw Assert.CreateException();

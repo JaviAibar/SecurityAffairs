@@ -1,16 +1,13 @@
-﻿
-
-using System.Collections.Generic;
-using UnityEngine;
+﻿using ShaderForge;
 using UnityEditor;
-using System.Linq;
-using ShaderForge;
+using UnityEngine;
 
-public class ShaderForgeMaterialInspector : MaterialEditor {
-	
-	// this is the same as the ShaderProperty function, show here so 
-	// you can see how it works
-	/*
+public class ShaderForgeMaterialInspector : MaterialEditor
+{
+
+    // this is the same as the ShaderProperty function, show here so 
+    // you can see how it works
+    /*
 	private void ShaderPropertyImpl(Shader shader, int propertyIndex)
 	{
 		int i = propertyIndex;
@@ -68,53 +65,56 @@ public class ShaderForgeMaterialInspector : MaterialEditor {
 
 
 
-	public override void OnInspectorGUI()
-	{
-		base.serializedObject.Update();
-		var theShader = serializedObject.FindProperty ("m_Shader");
+    public override void OnInspectorGUI()
+    {
+        base.serializedObject.Update();
+        var theShader = serializedObject.FindProperty("m_Shader");
 
 
-		if (isVisible && !theShader.hasMultipleDifferentValues && theShader.objectReferenceValue != null )
-		{
+        if (isVisible && !theShader.hasMultipleDifferentValues && theShader.objectReferenceValue != null)
+        {
 
-			Shader shader = theShader.objectReferenceValue as Shader;
-
-
-			// SHADER FORGE BUTTONS
-			if( GUILayout.Button( "Open shader in Shader Forge" ) ) {
-				SF_Editor.Init( shader );
-			}
-			if( SF_Tools.advancedInspector ) {
-				GUILayout.BeginHorizontal();
-				{
-					GUIStyle btnStyle = "MiniButton";
-					if( GUILayout.Button( "Open shader code", btnStyle ) ) {
-						UnityEditorInternal.InternalEditorUtility.OpenFileAtLineExternal( AssetDatabase.GetAssetPath( shader ), 1 );
-					}
-					//if( GUILayout.Button( "Open compiled shader", btnStyle ) ) {
-					//	ShaderForgeInspector.OpenCompiledShader( shader );
-					//}
-				}
-				GUILayout.EndHorizontal();
-			}
-
-			Material mat = target as Material;
-			
-
-			mat.globalIlluminationFlags = (MaterialGlobalIlluminationFlags)EditorGUILayout.EnumPopup( "Emission GI", mat.globalIlluminationFlags);
-			
-			GUILayout.Space(6);
+            Shader shader = theShader.objectReferenceValue as Shader;
 
 
+            // SHADER FORGE BUTTONS
+            if (GUILayout.Button("Open shader in Shader Forge"))
+            {
+                SF_Editor.Init(shader);
+            }
+            if (SF_Tools.advancedInspector)
+            {
+                GUILayout.BeginHorizontal();
+                {
+                    GUIStyle btnStyle = "MiniButton";
+                    if (GUILayout.Button("Open shader code", btnStyle))
+                    {
+                        UnityEditorInternal.InternalEditorUtility.OpenFileAtLineExternal(AssetDatabase.GetAssetPath(shader), 1);
+                    }
+                    //if( GUILayout.Button( "Open compiled shader", btnStyle ) ) {
+                    //	ShaderForgeInspector.OpenCompiledShader( shader );
+                    //}
+                }
+                GUILayout.EndHorizontal();
+            }
+
+            Material mat = target as Material;
 
 
-			if(this.PropertiesGUI())
-				this.PropertiesChanged();
-		}
-	}
+            mat.globalIlluminationFlags = (MaterialGlobalIlluminationFlags)EditorGUILayout.EnumPopup("Emission GI", mat.globalIlluminationFlags);
+
+            GUILayout.Space(6);
 
 
-	/*
+
+
+            if (this.PropertiesGUI())
+                this.PropertiesChanged();
+        }
+    }
+
+
+    /*
 	public override void OnInspectorGUI ()
 	{
 		serializedObject.Update ();

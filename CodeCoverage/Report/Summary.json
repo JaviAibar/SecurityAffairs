@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "generatedon": "2024-02-26T12:14:02Z",
+    "parser": "MultiReportParser (6x OpenCoverParser)",
+    "assemblies": 1,
+    "classes": 14,
+    "files": 14,
+    "coveredlines": 72,
+    "uncoveredlines": 95,
+    "coverablelines": 167,
+    "totallines": 396,
+    "linecoverage": 43.1,
+    "coveredbranches": 0,
+    "totalbranches": 0,
+    "coveredmethods": 21,
+    "totalmethods": 46,
+    "methodcoverage": 45.6
+ },
+  "coverage": {
+    "assemblies": [
+      { "name": "SecurityAffairs", "classes": 14, "coverage": 43.1, "coveredlines": 72, "coverablelines": 167, "totallines": 396, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 45.6, "coveredmethods": 21, "totalmethods": 46, "classesinassembly": [
+        { "name": "AnimationPlaySound", "coverage": 0, "coveredlines": 0, "coverablelines": 6, "totallines": 17, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 },
+        { "name": "AudioService", "coverage": 0, "coveredlines": 0, "coverablelines": 6, "totallines": 19, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 },
+        { "name": "ClockAudioManager", "coverage": 100, "coveredlines": 6, "coverablelines": 6, "totallines": 19, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 2, "totalmethods": 2 },
+        { "name": "Constants", "coverage": 50, "coveredlines": 1, "coverablelines": 2, "totallines": 5, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 50, "coveredmethods": 1, "totalmethods": 2 },
+        { "name": "DisableImage", "coverage": 0, "coveredlines": 0, "coverablelines": 3, "totallines": 9, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
+        { "name": "Engine", "coverage": 38.4, "coveredlines": 10, "coverablelines": 26, "totallines": 51, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 42.8, "coveredmethods": 3, "totalmethods": 7 },
+        { "name": "FindablesService", "coverage": 100, "coveredlines": 20, "coverablelines": 20, "totallines": 39, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 5, "totalmethods": 5 },
+        { "name": "GameInstaller", "coverage": 0, "coveredlines": 0, "coverablelines": 6, "totallines": 42, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
+        { "name": "PlaySoundScript", "coverage": 0, "coveredlines": 0, "coverablelines": 12, "totallines": 24, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "ResolutionSelector", "coverage": 0, "coveredlines": 0, "coverablelines": 9, "totallines": 22, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "ResolutionsService", "coverage": 0, "coveredlines": 0, "coverablelines": 28, "totallines": 60, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "Selectable", "coverage": 100, "coveredlines": 16, "coverablelines": 16, "totallines": 33, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 },
+        { "name": "SelectablesManager", "coverage": 100, "coveredlines": 19, "coverablelines": 19, "totallines": 40, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 4, "totalmethods": 4 },
+        { "name": "SwitchClickableChildren", "coverage": 0, "coveredlines": 0, "coverablelines": 8, "totallines": 16, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 } ] } ]
+  }
+}

@@ -1,5 +1,5 @@
-using System;
 using ModestTree;
+using System;
 
 namespace Zenject
 {
@@ -42,7 +42,7 @@ namespace Zenject
 
             var gameObjectInfo = new GameObjectCreationParameters();
 
-            ProviderFunc = 
+            ProviderFunc =
                 (container) => new SubContainerDependencyProvider(
                     ContractType, SubIdentifier,
                     new SubContainerCreatorByNewPrefabWithParams(
@@ -80,7 +80,7 @@ namespace Zenject
 
             var gameObjectInfo = new GameObjectCreationParameters();
 
-            ProviderFunc = 
+            ProviderFunc =
                 (container) => new SubContainerDependencyProvider(
                     ContractType, SubIdentifier,
                     new SubContainerCreatorByNewPrefabWithParams(

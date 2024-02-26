@@ -1,11 +1,8 @@
+using ModestTree;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ModestTree;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.Profiling;
-using Zenject;
 
 namespace Zenject.MemoryPoolMonitor
 {
@@ -170,7 +167,7 @@ namespace Zenject.MemoryPoolMonitor
 
             //if (poolType.Namespace == "Zenject")
             //{
-                //return false;
+            //return false;
             //}
 
             if (_actualFilter.IsEmpty())
@@ -275,15 +272,15 @@ namespace Zenject.MemoryPoolMonitor
             switch (Event.current.GetTypeForControl(_controlID))
             {
                 case EventType.ScrollWheel:
-                {
-                    _scrollPosition = Mathf.Clamp(_scrollPosition + Event.current.delta.y * _settings.ScrollSpeed, 0, TotalHeight);
-                    break;
-                }
+                    {
+                        _scrollPosition = Mathf.Clamp(_scrollPosition + Event.current.delta.y * _settings.ScrollSpeed, 0, TotalHeight);
+                        break;
+                    }
                 case EventType.MouseDown:
-                {
-                    _selectedPoolType = TryGetPoolTypeUnderMouse();
-                    break;
-                }
+                    {
+                        _selectedPoolType = TryGetPoolTypeUnderMouse();
+                        break;
+                    }
             }
         }
 
@@ -409,51 +406,51 @@ namespace Zenject.MemoryPoolMonitor
             switch (index)
             {
                 case 0:
-                {
-                    GUI.Label(bounds, GetName(pool), _settings.ContentNameTextStyle);
-                    break;
-                }
+                    {
+                        GUI.Label(bounds, GetName(pool), _settings.ContentNameTextStyle);
+                        break;
+                    }
                 case 1:
-                {
-                    GUI.Label(bounds, pool.NumTotal.ToString(), _settings.ContentNumberTextStyle);
-                    break;
-                }
+                    {
+                        GUI.Label(bounds, pool.NumTotal.ToString(), _settings.ContentNumberTextStyle);
+                        break;
+                    }
                 case 2:
-                {
-                    GUI.Label(bounds, pool.NumActive.ToString(), _settings.ContentNumberTextStyle);
-                    break;
-                }
+                    {
+                        GUI.Label(bounds, pool.NumActive.ToString(), _settings.ContentNumberTextStyle);
+                        break;
+                    }
                 case 3:
-                {
-                    GUI.Label(bounds, pool.NumInactive.ToString(), _settings.ContentNumberTextStyle);
-                    break;
-                }
+                    {
+                        GUI.Label(bounds, pool.NumInactive.ToString(), _settings.ContentNumberTextStyle);
+                        break;
+                    }
                 case 4:
-                {
-                    var buttonBounds = new Rect(
-                        bounds.x + _settings.ButtonMargin, bounds.y, bounds.width - _settings.ButtonMargin, bounds.height);
-
-                    if (GUI.Button(buttonBounds, "Clear"))
                     {
-                        pool.Clear();
+                        var buttonBounds = new Rect(
+                            bounds.x + _settings.ButtonMargin, bounds.y, bounds.width - _settings.ButtonMargin, bounds.height);
+
+                        if (GUI.Button(buttonBounds, "Clear"))
+                        {
+                            pool.Clear();
+                        }
+                        break;
                     }
-                    break;
-                }
                 case 5:
-                {
-                    var buttonBounds = new Rect(
-                        bounds.x, bounds.y, bounds.width - 15.0f, bounds.height);
-
-                    if (GUI.Button(buttonBounds, "Expand"))
                     {
-                        pool.ExpandBy(5);
+                        var buttonBounds = new Rect(
+                            bounds.x, bounds.y, bounds.width - 15.0f, bounds.height);
+
+                        if (GUI.Button(buttonBounds, "Expand"))
+                        {
+                            pool.ExpandBy(5);
+                        }
+                        break;
                     }
-                    break;
-                }
                 default:
-                {
-                    throw Assert.CreateException();
-                }
+                    {
+                        throw Assert.CreateException();
+                    }
             }
         }
 
@@ -499,21 +496,21 @@ namespace Zenject.MemoryPoolMonitor
                 case 4:
                 case 5:
                 case 0:
-                {
-                    return GetName(left).CompareTo(GetName(right));
-                }
+                    {
+                        return GetName(left).CompareTo(GetName(right));
+                    }
                 case 1:
-                {
-                    return left.NumTotal.CompareTo(right.NumTotal);
-                }
+                    {
+                        return left.NumTotal.CompareTo(right.NumTotal);
+                    }
                 case 2:
-                {
-                    return left.NumActive.CompareTo(right.NumActive);
-                }
+                    {
+                        return left.NumActive.CompareTo(right.NumActive);
+                    }
                 case 3:
-                {
-                    return left.NumInactive.CompareTo(right.NumInactive);
-                }
+                    {
+                        return left.NumInactive.CompareTo(right.NumInactive);
+                    }
             }
 
             throw Assert.CreateException();

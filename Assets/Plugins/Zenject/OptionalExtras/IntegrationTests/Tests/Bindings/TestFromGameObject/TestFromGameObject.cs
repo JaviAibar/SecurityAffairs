@@ -1,8 +1,8 @@
 ﻿
+using ModestTree;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using ModestTree;
 using UnityEngine;
 using UnityEngine.TestTools;
 
@@ -100,7 +100,7 @@ namespace Zenject.Tests.Bindings
         public IEnumerator TestMultipleConcreteTransient2()
         {
             PreInstall();
-            Container.Bind(typeof(IFoo), typeof(IBar)).To(new List<Type> {typeof(Foo), typeof(Bar)}).FromNewComponentOnNewGameObject()
+            Container.Bind(typeof(IFoo), typeof(IBar)).To(new List<Type> { typeof(Foo), typeof(Bar) }).FromNewComponentOnNewGameObject()
                 .WithGameObjectName(GameObjName).AsTransient().NonLazy();
 
             PostInstall();
@@ -115,7 +115,7 @@ namespace Zenject.Tests.Bindings
         public IEnumerator TestMultipleConcreteCached()
         {
             PreInstall();
-            Container.Bind(typeof(IFoo), typeof(IBar)).To(new List<Type> {typeof(Foo), typeof(Bar)}).FromNewComponentOnNewGameObject()
+            Container.Bind(typeof(IFoo), typeof(IBar)).To(new List<Type> { typeof(Foo), typeof(Bar) }).FromNewComponentOnNewGameObject()
                 .WithGameObjectName(GameObjName).AsSingle().NonLazy();
 
             PostInstall();
@@ -130,7 +130,7 @@ namespace Zenject.Tests.Bindings
         public IEnumerator TestMultipleConcreteSingle()
         {
             PreInstall();
-            Container.Bind(typeof(IFoo), typeof(IBar)).To(new List<Type> {typeof(Foo), typeof(Bar)}).FromNewComponentOnNewGameObject()
+            Container.Bind(typeof(IFoo), typeof(IBar)).To(new List<Type> { typeof(Foo), typeof(Bar) }).FromNewComponentOnNewGameObject()
                 .WithGameObjectName(GameObjName).AsSingle().NonLazy();
 
             PostInstall();
