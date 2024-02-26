@@ -1,6 +1,5 @@
 #if !NOT_UNITY3D
 
-using ModestTree;
 
 namespace Zenject
 {

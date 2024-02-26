@@ -1,5 +1,3 @@
-using SecurityAffairs.Files.Scripts;
-using SecurityAffairs.Scripts.Services;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -38,7 +36,7 @@ public class GameInstaller : MonoInstaller
         Container.Bind<IAudioService>()
             .To<AudioService>()
             .AsSingle()
-            .WithArguments(_clockAudioSource); 
+            .WithArguments(_clockAudioSource);
 
     }
 }

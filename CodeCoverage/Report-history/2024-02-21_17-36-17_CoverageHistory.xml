@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2024-02-21_17-36-17" tag="">
+  <assembly name="Assembly-CSharp-Editor-firstpass">
+    <class name="ShaderForgeMaterialInspector" coveredlines="0" coverablelines="26" totallines="170" coveredbranches="0" totalbranches="0" />
+    <class name="UnityEditor.ShaderForgeInspector" coveredlines="0" coverablelines="197" totallines="405" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Assembly-CSharp-firstpass">
+    <class name="AnimationHierarchyEditor" coveredlines="0" coverablelines="241" totallines="377" coveredbranches="0" totalbranches="0" />
+    <class name="EditorLabel" coveredlines="0" coverablelines="36" totallines="81" coveredbranches="0" totalbranches="0" />
+    <class name="EnableCameraDepthInForward" coveredlines="0" coverablelines="10" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="SoftNormalsToVertexColor" coveredlines="0" coverablelines="68" totallines="99" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="SecurityAffairs">
+    <class name="DisableImage" coveredlines="0" coverablelines="3" totallines="12" coveredbranches="0" totalbranches="0" />
+    <class name="Engine" coveredlines="2" coverablelines="26" totallines="51" coveredbranches="0" totalbranches="0" />
+    <class name="GameInstaller" coveredlines="0" coverablelines="6" totallines="44" coveredbranches="0" totalbranches="0" />
+    <class name="PlaySoundScript" coveredlines="0" coverablelines="12" totallines="25" coveredbranches="0" totalbranches="0" />
+    <class name="ResolutionSelector" coveredlines="0" coverablelines="9" totallines="25" coveredbranches="0" totalbranches="0" />
+    <class name="SecurityAffairs.Files.Scripts.Constants" coveredlines="0" coverablelines="2" totallines="14" coveredbranches="0" totalbranches="0" />
+    <class name="SecurityAffairs.Files.Scripts.ResolutionsService" coveredlines="0" coverablelines="28" totallines="67" coveredbranches="0" totalbranches="0" />
+    <class name="SecurityAffairs.Scripts.Services.AudioService" coveredlines="0" coverablelines="6" totallines="26" coveredbranches="0" totalbranches="0" />
+    <class name="SecurityAffairs.Scripts.Services.FindablesService" coveredlines="0" coverablelines="20" totallines="44" coveredbranches="0" totalbranches="0" />
+    <class name="SecurityAffairs.Scripts.Services.SelectablesManager" coveredlines="0" coverablelines="19" totallines="41" coveredbranches="0" totalbranches="0" />
+    <class name="Selectable" coveredlines="16" coverablelines="16" totallines="34" coveredbranches="0" totalbranches="0" />
+    <class name="SwitchClickableChildren" coveredlines="0" coverablelines="6" totallines="18" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="SecurityAffairs.Tests">
+    <class name="SecurityAffairs.Testing.SetupScenario" coveredlines="35" coverablelines="35" totallines="53" coveredbranches="0" totalbranches="0" />
+    <class name="SecurityAffairs.Tests.PrefabFinder" coveredlines="13" coverablelines="13" totallines="29" coveredbranches="0" totalbranches="0" />
+    <class name="TestFindableService" coveredlines="0" coverablelines="66" totallines="126" coveredbranches="0" totalbranches="0" />
+    <class name="TestSelectablesManager" coveredlines="43" coverablelines="61" totallines="93" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

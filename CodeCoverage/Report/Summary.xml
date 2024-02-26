@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>26/02/2024 - 13:14:02</Generatedon>
+    <Parser>MultiReportParser (6x OpenCoverParser)</Parser>
+    <Assemblies>1</Assemblies>
+    <Classes>14</Classes>
+    <Files>14</Files>
+    <Coveredlines>72</Coveredlines>
+    <Uncoveredlines>95</Uncoveredlines>
+    <Coverablelines>167</Coverablelines>
+    <Totallines>396</Totallines>
+    <Linecoverage>43.1</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>21</Coveredmethods>
+    <Totalmethods>46</Totalmethods>
+    <Methodcoverage>45.6</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="SecurityAffairs" classes="14" coverage="43.1" coveredlines="72" coverablelines="167" totallines="396" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="21" totalmethods="46" methodcoverage="45.6">
+      <Class name="AnimationPlaySound" coverage="0" coveredlines="0" coverablelines="6" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="AudioService" coverage="0" coveredlines="0" coverablelines="6" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="ClockAudioManager" coverage="100" coveredlines="6" coverablelines="6" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="Constants" coverage="50" coveredlines="1" coverablelines="2" totallines="5" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="DisableImage" coverage="0" coveredlines="0" coverablelines="3" totallines="9" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="Engine" coverage="38.4" coveredlines="10" coverablelines="26" totallines="51" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="7" methodcoverage="42.8" />
+      <Class name="FindablesService" coverage="100" coveredlines="20" coverablelines="20" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="5" methodcoverage="100" />
+      <Class name="GameInstaller" coverage="0" coveredlines="0" coverablelines="6" totallines="42" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="PlaySoundScript" coverage="0" coveredlines="0" coverablelines="12" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="ResolutionSelector" coverage="0" coveredlines="0" coverablelines="9" totallines="22" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="ResolutionsService" coverage="0" coveredlines="0" coverablelines="28" totallines="60" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Selectable" coverage="100" coveredlines="16" coverablelines="16" totallines="33" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100" />
+      <Class name="SelectablesManager" coverage="100" coveredlines="19" coverablelines="19" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="SwitchClickableChildren" coverage="0" coveredlines="0" coverablelines="8" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

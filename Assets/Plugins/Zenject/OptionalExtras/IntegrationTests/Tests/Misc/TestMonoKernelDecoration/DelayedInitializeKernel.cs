@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using Zenject;
 
 namespace Zenject.Tests.TestAnimationStateBehaviourInject
 {

@@ -1,9 +1,4 @@
 ﻿using ModestTree;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SecurityAffairs.Tests
@@ -22,7 +17,8 @@ namespace SecurityAffairs.Tests
                     break;
                 }
             }
-            Assert.IsNotNull(prefabsComponent, "Expected to find prefab '{0}'", name);
+            Assert.IsNotNull(prefabsComponent, "Prefab container not found in Resources folder. Is it named Prefabs?");
+            Assert.IsNotNull(selectedPrefab, "Expected to find prefab '{0}'. Is it registered in Resources/Prefabs?", name);
             return selectedPrefab;
         }
     }

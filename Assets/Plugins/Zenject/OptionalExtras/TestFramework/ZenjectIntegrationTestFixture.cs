@@ -1,12 +1,11 @@
-using System;
-using System.Collections;
-using Zenject.Internal;
-using ModestTree;
-using Assert = ModestTree.Assert;
-using System.Linq;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
+using System;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
+using Zenject.Internal;
+using Assert = ModestTree.Assert;
 
 namespace Zenject
 {

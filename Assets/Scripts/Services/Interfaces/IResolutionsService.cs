@@ -1,9 +1,6 @@
-﻿namespace SecurityAffairs.Files.Scripts
+﻿public interface IResolutionsService
 {
-    public interface IResolutionsService
-    {
-        void SetNextRes();
-        void SetPrevRes();
-        void SetRes();
-    }
+    void SetNextRes();
+    void SetPrevRes();
+    void SetRes();
 }

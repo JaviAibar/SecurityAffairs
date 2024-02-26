@@ -1,32 +1,32 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Selectable : MonoBehaviour {
+public class Selectable : MonoBehaviour
+{
     private bool _found = false;
-    private bool isClicable;
+    private bool _isClicable;
+    public bool IsClicable => _isClicable;
 
     public bool Found => _found;
 
     public event Action<Selectable> OnFound;
 
-   public void FindSelectable()
+    public void FindSelectable()
     {
         //print(name + " isClicable: " + isClicable + ", found: " + found + ", faltan: " + (engine.findings < engine.findable.Count) + " "+ engine.Secs);
-        if (isClicable && !_found)
+        if (_isClicable && !_found)
         {
             _found = true;
             OnFound?.Invoke(this);
         }
     }
-   
+
     public void SwitchClicable()
     {
-        isClicable = !isClicable;
+        _isClicable = !_isClicable;
     }
 
-    internal void Reset()
+    public void ResetFindable()
     {
         _found = false;
     }

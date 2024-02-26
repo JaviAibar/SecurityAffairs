@@ -1,5 +1,5 @@
-using System;
 using ModestTree;
+using System;
 using UnityEngine;
 
 #pragma warning disable 649
@@ -49,26 +49,26 @@ namespace Zenject.Asteroids
                 switch (_gameController.State)
                 {
                     case GameStates.WaitingToStart:
-                    {
-                        StartGui();
-                        break;
-                    }
+                        {
+                            StartGui();
+                            break;
+                        }
                     case GameStates.Playing:
-                    {
-                        PlayingGui();
-                        break;
-                    }
+                        {
+                            PlayingGui();
+                            break;
+                        }
                     case GameStates.GameOver:
-                    {
-                        PlayingGui();
-                        GameOverGui();
-                        break;
-                    }
+                        {
+                            PlayingGui();
+                            GameOverGui();
+                            break;
+                        }
                     default:
-                    {
-                        Assert.That(false);
-                        break;
-                    }
+                        {
+                            Assert.That(false);
+                            break;
+                        }
                 }
             }
             GUILayout.EndArea();

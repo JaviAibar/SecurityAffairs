@@ -1,6 +1,6 @@
+using ModestTree;
 using System.Collections;
 using System.Collections.Generic;
-using ModestTree;
 using UnityEngine;
 using UnityEngine.TestTools;
 using Zenject.Tests.Bindings.DiContainerMethods;

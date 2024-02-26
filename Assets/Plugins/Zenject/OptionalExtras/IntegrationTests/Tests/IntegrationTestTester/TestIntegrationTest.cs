@@ -1,6 +1,6 @@
+using ModestTree;
 using System;
 using System.Collections;
-using ModestTree;
 using UnityEngine.TestTools;
 
 namespace Zenject.Tests

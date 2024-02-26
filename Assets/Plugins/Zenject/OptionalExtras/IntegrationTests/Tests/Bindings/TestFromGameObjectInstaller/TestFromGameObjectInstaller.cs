@@ -1,7 +1,6 @@
 ﻿
-using System.Collections;
 using ModestTree;
-using UnityEngine;
+using System.Collections;
 using UnityEngine.TestTools;
 
 namespace Zenject.Tests.Bindings.FromGameObjectInstaller

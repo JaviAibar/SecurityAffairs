@@ -1,7 +1,4 @@
-﻿namespace SecurityAffairs.Scripts.Services
+﻿public interface IAudioService
 {
-    internal interface IAudioService
-    {
-        void StartPlaying();
-    }
+    void StartPlaying();
 }

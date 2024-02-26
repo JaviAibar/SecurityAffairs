@@ -1,6 +1,6 @@
+using ModestTree;
 using System;
 using System.Collections.Generic;
-using ModestTree;
 #if ZEN_SIGNALS_ADD_UNIRX
 using UniRx;
 #endif
@@ -41,7 +41,7 @@ namespace Zenject
         }
 #endif
 
-		public List<SignalSubscription> Subscriptions => _subscriptions;
+        public List<SignalSubscription> Subscriptions => _subscriptions;
 
         public int TickPriority
         {

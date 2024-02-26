@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2024-02-26_13-13-57" tag="">
+  <assembly name="SecurityAffairs">
+    <class name="AnimationPlaySound" coveredlines="0" coverablelines="6" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="AudioService" coveredlines="0" coverablelines="6" totallines="19" coveredbranches="0" totalbranches="0" />
+    <class name="ClockAudioManager" coveredlines="6" coverablelines="6" totallines="19" coveredbranches="0" totalbranches="0" />
+    <class name="Constants" coveredlines="1" coverablelines="2" totallines="5" coveredbranches="0" totalbranches="0" />
+    <class name="DisableImage" coveredlines="0" coverablelines="3" totallines="9" coveredbranches="0" totalbranches="0" />
+    <class name="Engine" coveredlines="10" coverablelines="26" totallines="51" coveredbranches="0" totalbranches="0" />
+    <class name="FindablesService" coveredlines="20" coverablelines="20" totallines="39" coveredbranches="0" totalbranches="0" />
+    <class name="GameInstaller" coveredlines="0" coverablelines="6" totallines="42" coveredbranches="0" totalbranches="0" />
+    <class name="PlaySoundScript" coveredlines="0" coverablelines="12" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="ResolutionSelector" coveredlines="0" coverablelines="9" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="ResolutionsService" coveredlines="0" coverablelines="28" totallines="60" coveredbranches="0" totalbranches="0" />
+    <class name="Selectable" coveredlines="16" coverablelines="16" totallines="33" coveredbranches="0" totalbranches="0" />
+    <class name="SelectablesManager" coveredlines="19" coverablelines="19" totallines="40" coveredbranches="0" totalbranches="0" />
+    <class name="SwitchClickableChildren" coveredlines="0" coverablelines="8" totallines="16" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

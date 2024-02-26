@@ -1,6 +1,3 @@
-using UnityEngine;
-using Zenject;
-
 namespace Zenject.Tests.TestAnimationStateBehaviourInject
 {
     public class KernelDecoratorInstaller : Installer<KernelDecoratorInstaller>

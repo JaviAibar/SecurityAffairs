@@ -1,5 +1,5 @@
-using System;
 using ModestTree;
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -73,33 +73,33 @@ namespace Zenject.SpaceFighter
             switch (side)
             {
                 case 0:
-                // top
-                {
-                    return new Vector3(
-                        _levelBoundary.Left + posOnSide * _levelBoundary.Width,
-                        _levelBoundary.Top + buffer, 0);
-                }
+                    // top
+                    {
+                        return new Vector3(
+                            _levelBoundary.Left + posOnSide * _levelBoundary.Width,
+                            _levelBoundary.Top + buffer, 0);
+                    }
                 case 1:
-                // right
-                {
-                    return new Vector3(
-                        _levelBoundary.Right + buffer,
-                        _levelBoundary.Top - posOnSide * _levelBoundary.Height, 0);
-                }
+                    // right
+                    {
+                        return new Vector3(
+                            _levelBoundary.Right + buffer,
+                            _levelBoundary.Top - posOnSide * _levelBoundary.Height, 0);
+                    }
                 case 2:
-                // bottom
-                {
-                    return new Vector3(
-                        _levelBoundary.Left + posOnSide * _levelBoundary.Width,
-                        _levelBoundary.Bottom - buffer, 0);
-                }
+                    // bottom
+                    {
+                        return new Vector3(
+                            _levelBoundary.Left + posOnSide * _levelBoundary.Width,
+                            _levelBoundary.Bottom - buffer, 0);
+                    }
                 case 3:
-                // left
-                {
-                    return new Vector3(
-                        _levelBoundary.Left - buffer,
-                        _levelBoundary.Top - posOnSide * _levelBoundary.Height, 0);
-                }
+                    // left
+                    {
+                        return new Vector3(
+                            _levelBoundary.Left - buffer,
+                            _levelBoundary.Top - posOnSide * _levelBoundary.Height, 0);
+                    }
             }
 
             throw Assert.CreateException();
