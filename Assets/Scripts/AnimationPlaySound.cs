@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class AnimationPlaySound : MonoBehaviour
 {
-    private AudioSource m_AudioSource;
+    private AudioSource _audioSource;
     void Start()
     {
-        m_AudioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void PlaySound()
     {
-        m_AudioSource.Play();
+        _audioSource.Play();
     }
 }

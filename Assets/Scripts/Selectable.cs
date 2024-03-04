@@ -21,13 +21,18 @@ public class Selectable : MonoBehaviour
         }
     }
 
-    public void SwitchClicable()
+    public void EnableClicable()
     {
-        _isClicable = !_isClicable;
+        _isClicable = true;
     }
 
+    public void DisableClicable()
+    {
+        _isClicable = false;
+    }
     public void ResetFindable()
     {
+        _isClicable = false;
         _found = false;
     }
 }

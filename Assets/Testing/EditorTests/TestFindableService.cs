@@ -12,7 +12,7 @@ public class TestFindableService : ZenjectUnitTestFixture
     Selectable[] selectables;
     Transform findableObjects;
     Image[] findableImages;
-    SelectablesManager selectablesManager;
+    readonly SelectablesManager selectablesManager;
 
     [SetUp]
     public void CommonInstall()
@@ -45,7 +45,7 @@ public class TestFindableService : ZenjectUnitTestFixture
         Assert.AreEqual(0, findablesService.Founds);
 
         // If we find a selectable (whichever it is)
-        selectables[1].SwitchClicable();
+        selectables[1].EnableClicable();
         selectables[1].FindSelectable();
 
         // ...then first image should be selected
@@ -53,7 +53,7 @@ public class TestFindableService : ZenjectUnitTestFixture
 
 
         // Repeat
-        selectables[2].SwitchClicable();
+        selectables[2].EnableClicable();
         selectables[2].FindSelectable();
 
         Assert.AreEqual(2, findablesService.Founds);
@@ -61,7 +61,7 @@ public class TestFindableService : ZenjectUnitTestFixture
         findablesService.ResetFindables();
         Assert.AreEqual(0, findablesService.Founds);
 
-        selectables[0].SwitchClicable();
+        selectables[0].EnableClicable();
         selectables[0].FindSelectable();
         Assert.AreEqual(1, findablesService.Founds);
 
@@ -71,8 +71,12 @@ public class TestFindableService : ZenjectUnitTestFixture
 
         selectables[1].ResetFindable();
         selectables[1].FindSelectable();
-        Assert.AreEqual(2, findablesService.Founds);
+        // Should not count because, at reset, should be not clicable
+        Assert.AreEqual(1, findablesService.Founds);
 
+        selectables[1].EnableClicable();
+        selectables[1].FindSelectable();
+        Assert.AreEqual(2, findablesService.Founds);
     }
 
 
@@ -88,7 +92,7 @@ public class TestFindableService : ZenjectUnitTestFixture
             Assert.AreEqual(spriteUnselected, findableImages[i].sprite);
 
         // If we find a selectable (whichever it is)
-        selectables[1].SwitchClicable();
+        selectables[1].EnableClicable();
         selectables[1].FindSelectable();
 
         // ...then first image should be selected
@@ -99,7 +103,7 @@ public class TestFindableService : ZenjectUnitTestFixture
             Assert.AreEqual(spriteUnselected, findableImages[i].sprite);
 
         // Repeat
-        selectables[2].SwitchClicable();
+        selectables[2].EnableClicable();
         selectables[2].FindSelectable();
 
         for (int i = 0; i < findableImages.Length - 1; i++)

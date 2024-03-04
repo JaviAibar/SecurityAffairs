@@ -53,7 +53,7 @@ internal class TestSelectablesManagerPlay : ZenjectIntegrationTestFixture
         // If we find a selectable (whichever it is)
         for (int i = 0; i < selectables.Length; i++)
         {
-            selectables[i].SwitchClicable();
+            selectables[i].EnableClicable();
             selectables[i].FindSelectable();
         }
 

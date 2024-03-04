@@ -543,7 +543,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 5
-    functionName: SwitchClicable
+    functionName: EnableClicable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -556,15 +556,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 6
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 7
-    functionName: SwitchClicable
+    functionName: DisableClicable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

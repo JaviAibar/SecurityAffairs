@@ -7,6 +7,9 @@ public class GameInstaller : MonoInstaller
     [SerializeField]
     private Animator _resolutionsTextAnimator;
 
+    [SerializeField] 
+    private Image _cursor;
+
     [SerializeField]
     private Text _resolutionsText;
 
@@ -38,5 +41,8 @@ public class GameInstaller : MonoInstaller
             .AsSingle()
             .WithArguments(_clockAudioSource);
 
+        Container.BindInterfacesAndSelfTo<CursorManager>().AsSingle().WithArguments(_cursor);
+        Container.BindInstance(this);
     }
+
 }

@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class SwitchClickableChildren : MonoBehaviour
 {
-    [SerializeField] private Selectable m_Selectable;
+    [SerializeField] private Selectable _selectable;
     private void Awake()
     {
-        if (m_Selectable == null)  
-            m_Selectable = GetComponentInChildren<Selectable>();
+        if (_selectable == null)  
+            _selectable = GetComponentInChildren<Selectable>();
     }
 
-    public void SwitchClickable()
+    public void EnableClicable()
     {
-        m_Selectable.SwitchClicable();
+        _selectable.EnableClicable();
+    }
+
+    public void DisableClicable()
+    {
+        _selectable.DisableClicable();
     }
 }

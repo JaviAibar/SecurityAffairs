@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class ClockAudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource m_ThunderAudioSource;
-    [SerializeField] private AudioSource m_ClockAudioSource;
+    [SerializeField] private AudioSource _thunderAudioSource;
+    [SerializeField] private AudioSource _clockAudioSource;
 
     public void PlayClock()
     {
-        m_ClockAudioSource.Play();
+        _clockAudioSource.Play();
     }
 
     public void PlayThunder()
     {
-        m_ThunderAudioSource.Play();
+        _thunderAudioSource.Play();
+    }
+
+    public void StopThunder()
+    {
+        _thunderAudioSource.Stop();
     }
 }

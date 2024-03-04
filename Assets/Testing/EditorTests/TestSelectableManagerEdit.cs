@@ -43,7 +43,25 @@ public class TestSelectableManagerEdit : ZenjectUnitTestFixture
 
         foreach (var selectable in selectables)
         {
-            selectable.SwitchClicable();
+            selectable.EnableClicable();
+        }
+
+        Assert.IsTrue(selectables[0].IsClicable);
+        Assert.IsTrue(selectables[1].IsClicable);
+        Assert.IsTrue(selectables[2].IsClicable);
+
+        foreach (var selectable in selectables)
+        {
+            selectable.ResetFindable();
+        }
+
+        Assert.IsFalse(selectables[0].IsClicable);
+        Assert.IsFalse(selectables[1].IsClicable);
+        Assert.IsFalse(selectables[2].IsClicable);
+
+        foreach (var selectable in selectables)
+        {
+            selectable.EnableClicable();
         }
 
         Assert.IsTrue(selectables[0].IsClicable);
@@ -56,7 +74,7 @@ public class TestSelectableManagerEdit : ZenjectUnitTestFixture
     {
         for (int i = 0; i < selectables.Length; i++)
         {
-            selectables[i].SwitchClicable();
+            selectables[i].EnableClicable();
             selectables[i].FindSelectable();
             Assert.IsTrue(selectables[i].Found);
         }
@@ -66,7 +84,7 @@ public class TestSelectableManagerEdit : ZenjectUnitTestFixture
     public void _02_TestResetFindable()
     {
         // Setting one found but not the rest
-        selectables[0].SwitchClicable();
+        selectables[0].EnableClicable();
         selectables[0].FindSelectable();
         Assert.IsTrue(selectables[0].Found);
 
@@ -95,11 +113,11 @@ public class TestSelectableManagerEdit : ZenjectUnitTestFixture
         Assert.AreEqual(0, findablesService.Founds);
 
         // If we find a selectable (whichever it is)
-        selectables[0].SwitchClicable();
+        selectables[0].EnableClicable();
         selectables[0].FindSelectable();
 
 
-        selectables[1].SwitchClicable();
+        selectables[1].EnableClicable();
         selectables[1].FindSelectable();
 
         // ...then first image should be selected
