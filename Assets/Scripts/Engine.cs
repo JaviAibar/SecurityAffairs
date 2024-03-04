@@ -1,12 +1,9 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+﻿using System.Linq;
+using UnityEngine;
 using Zenject;
 
 public class Engine : MonoBehaviour
 {
-
-    [SerializeField] private Image _cursor;
     private bool _initiated = false;
     private float _seconds = 0;
     public float Seconds => _seconds;
@@ -14,22 +11,30 @@ public class Engine : MonoBehaviour
     [SerializeField] private Animator[] _animators;
     private const float MaxTimeToFind = 10.0f;
     public bool TimeOut => _seconds >= MaxTimeToFind;
-    [Inject] private IAudioService _audioService;
-    [Inject] private SelectablesManager _selectablesManager;
-    void Start()
-    {
-        if (SceneManager.GetActiveScene().name == "Game") Cursor.visible = false;
-        else Cursor.visible = true;
+    private IAudioService _audioService;
+    private SelectablesManager _selectablesManager;
+    private CursorManager _cursorManager;
 
-        _animators = _canvas.GetComponentsInChildren<Animator>();
+    [Inject]
+    public void Construct(CursorManager cursorManager, 
+                            SelectablesManager selectablesManager, 
+                            IAudioService audioService)
+    {
+        _cursorManager = cursorManager;
+        _selectablesManager = selectablesManager;
+        _audioService = audioService;
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        _animators = _canvas.GetComponentsInChildren<Animator>()
+                            .Where(e => e.CompareTag("SceneAnimator")).ToArray();
+    }
+
     void Update()
     {
         if (!_initiated) return;
 
-        _cursor.transform.position = Input.mousePosition;
         _seconds += Time.deltaTime;
         if (TimeOut) Init();
     }

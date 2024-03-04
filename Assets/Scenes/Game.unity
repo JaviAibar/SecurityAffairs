@@ -133,16 +133,16 @@ GameObject:
   m_Component:
   - component: {fileID: 3449780}
   - component: {fileID: 3449782}
-  - component: {fileID: 3449789}
   - component: {fileID: 3449784}
   - component: {fileID: 3449785}
   - component: {fileID: 3449781}
   - component: {fileID: 3449783}
   - component: {fileID: 3449787}
   - component: {fileID: 3449788}
+  - component: {fileID: 3449789}
   m_Layer: 5
   m_Name: Clockface
-  m_TagString: Selectable
+  m_TagString: SceneAnimator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500,8 +500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b333ed9e36a1c41a51acfe25283e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ThunderAudioSource: {fileID: 3449788}
-  m_ClockAudioSource: {fileID: 3449787}
+  _thunderAudioSource: {fileID: 3449788}
+  _clockAudioSource: {fileID: 3449787}
 --- !u!1 &113169058
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +725,10 @@ PrefabInstance:
     - target: {fileID: 1873848459781920, guid: dc8e209806615da43a6bffb04f5bbbb0, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873848459781920, guid: dc8e209806615da43a6bffb04f5bbbb0, type: 3}
+      propertyPath: m_TagString
+      value: SceneAnimator
       objectReference: {fileID: 0}
     - target: {fileID: 114272668120782152, guid: dc8e209806615da43a6bffb04f5bbbb0, type: 3}
       propertyPath: m_Enabled
@@ -1527,6 +1531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resolutionsTextAnimator: {fileID: 113169062}
+  _cursor: {fileID: 1414066198}
   _resolutionsText: {fileID: 113169061}
   _clockAudioSource: {fileID: 3449787}
   _findableImagesListGO: {fileID: 715583555}
@@ -2287,7 +2292,7 @@ GameObject:
   - component: {fileID: 1345745890}
   m_Layer: 5
   m_Name: Crucifix
-  m_TagString: Selectable
+  m_TagString: SceneAnimator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3193,7 +3198,7 @@ GameObject:
   - component: {fileID: 1757828314}
   m_Layer: 5
   m_Name: Pendulum
-  m_TagString: Untagged
+  m_TagString: SceneAnimator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3310,7 +3315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdff158529937494383391fc83157b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursor: {fileID: 1414066198}
   _canvas: {fileID: 414272969}
   _animators: []
 --- !u!4 &1817440859
@@ -4228,7 +4232,7 @@ GameObject:
   - component: {fileID: 2074538758}
   m_Layer: 5
   m_Name: Nun Object
-  m_TagString: Untagged
+  m_TagString: SceneAnimator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4394,7 +4398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfc3e49853855c40b60282a990bf528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Selectable: {fileID: 1547697768}
+  _selectable: {fileID: 0}
 --- !u!114 &2074538758
 MonoBehaviour:
   m_ObjectHideFlags: 0
