@@ -1,24 +1,22 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class PlaySoundScript : MonoBehaviour
 {
-    public AudioSource lightning;
-    public AudioSource clock;
-    public AudioSource crack;
-    public void PlaySoundLightning()
+    [SerializeField] private AudioClip _sound;
+    private AudioSource _audio;
+
+    public void Awake()
     {
-        lightning.Play();
+        _audio = GetComponent<AudioSource>();
+        _audio.clip = _sound;
     }
-    public void StopSoundLightning()
+
+    public void PlaySound()
     {
-        lightning.Stop();
-    }
-    public void PlaySoundClock()
-    {
-        clock.Play();
-    }
-    public void PlaySoundCrack()
-    {
-        crack.Play();
+        _audio.pitch = Random.Range(0.6f, 0.8f);
+        _audio.Play();
     }
 }

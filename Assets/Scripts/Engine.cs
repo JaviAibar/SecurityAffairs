@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 public class Engine : MonoBehaviour
@@ -15,6 +16,7 @@ public class Engine : MonoBehaviour
     private SelectablesManager _selectablesManager;
     private CursorManager _cursorManager;
 
+
     [Inject]
     public void Construct(CursorManager cursorManager, 
                             SelectablesManager selectablesManager, 
@@ -28,7 +30,7 @@ public class Engine : MonoBehaviour
     void Start()
     {
         _animators = _canvas.GetComponentsInChildren<Animator>()
-                            .Where(e => e.CompareTag("SceneAnimator")).ToArray();
+                               .Where(e => e.CompareTag("SceneAnimator")).ToArray();
     }
 
     void Update()

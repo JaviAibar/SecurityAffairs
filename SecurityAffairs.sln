@@ -17,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityAffairs", "SecurityAffairs.csproj", "{FC8008E9-C855-27DE-ED0F-9CC5A96162AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityAffairs.Tests", "SecurityAffairs.Tests.csproj", "{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-TestFramework", "Zenject-TestFramework.csproj", "{0717DC8C-019D-B29D-C3C6-06924869D961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityAffairs.Tests", "SecurityAffairs.Tests.csproj", "{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityAffairs.PlayTests", "SecurityAffairs.PlayTests.csproj", "{CBFCB4C7-5537-9ADE-C67C-E8C359DBF043}"
 EndProject
@@ -65,14 +65,14 @@ Global
 		{FC8008E9-C855-27DE-ED0F-9CC5A96162AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC8008E9-C855-27DE-ED0F-9CC5A96162AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC8008E9-C855-27DE-ED0F-9CC5A96162AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0717DC8C-019D-B29D-C3C6-06924869D961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0717DC8C-019D-B29D-C3C6-06924869D961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0717DC8C-019D-B29D-C3C6-06924869D961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0717DC8C-019D-B29D-C3C6-06924869D961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCA4F53-BB94-BA1F-2E0D-8BC7DB0948B9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBFCB4C7-5537-9ADE-C67C-E8C359DBF043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBFCB4C7-5537-9ADE-C67C-E8C359DBF043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBFCB4C7-5537-9ADE-C67C-E8C359DBF043}.Release|Any CPU.ActiveCfg = Release|Any CPU

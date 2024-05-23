@@ -8,7 +8,7 @@ public class ResolutionsService : IResolutionsService
     private Animator _resTextAnimator;
     private Text _resText;
     private readonly List<Resolution> _resolutions;
-    private readonly int _maxRefreshRate = Screen.resolutions.OrderByDescending(r => r.refreshRate).FirstOrDefault().refreshRate;
+    private readonly double _maxRefreshRate = Screen.resolutions.OrderByDescending(r => r.refreshRateRatio.value).FirstOrDefault().refreshRateRatio.value;
     private int _selectedRes = 0;
 
     public ResolutionsService(Animator resTextAnimator, Text resText)
@@ -17,7 +17,7 @@ public class ResolutionsService : IResolutionsService
         this._resText = resText;
         _selectedRes = 0;
 
-        _resolutions = Screen.resolutions.Where(resolution => resolution.refreshRate == _maxRefreshRate).ToList();
+        _resolutions = Screen.resolutions.Where(resolution => resolution.refreshRateRatio.value == _maxRefreshRate).ToList();
         _selectedRes = _resolutions.Count - 1;
         Debug.Log($"Detected {_resolutions.Count} resolutions:" + string.Join(",", _resolutions.Select(e => $"({e.height}, {e.width})").ToList()));
 
@@ -52,7 +52,7 @@ resText.gameObject.SetActive(false);
     {
         Resolution res = _resolutions[_selectedRes];
         Debug.Log($"Setting {_selectedRes + 1} res out of {_resolutions.Count}: selected {res.width} x {res.height}");
-        Screen.SetResolution(res.width, res.height, FullScreenMode.FullScreenWindow);
+        Screen.SetResolution(res.width, res.height, Screen.fullScreenMode);
         _resText.gameObject.SetActive(true);
         _resText.text = $"{res.width} x {res.height}";
         _resTextAnimator.SetTrigger(Constants.Show);

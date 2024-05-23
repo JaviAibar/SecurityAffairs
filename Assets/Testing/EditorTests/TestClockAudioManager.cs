@@ -28,9 +28,11 @@ public class TestClockAudioManager : ZenjectUnitTestFixture
         so.FindProperty("_clockAudioSource").objectReferenceValue = audioSource1;
         so.FindProperty("_thunderAudioSource").objectReferenceValue = audioSource2;
         so.ApplyModifiedProperties();
-
+        
         Object.Instantiate(audioManagerGO);
         Container.Bind<AudioService>().AsTransient();
+        
+        Container.Bind<ClockAudioManager>().FromInstance(clockAudioManager).AsSingle();
     }
 
     [Test]
@@ -38,7 +40,7 @@ public class TestClockAudioManager : ZenjectUnitTestFixture
     {
         Assert.IsFalse(audioSource1.isPlaying); 
         Assert.IsFalse(audioSource2.isPlaying);
-
+        var clockAudioManager = Container.Resolve<ClockAudioManager>();
         clockAudioManager.PlayClock();
 
         Assert.IsTrue(audioSource1.isPlaying);
